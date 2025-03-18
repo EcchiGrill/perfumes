@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 2.4rem;
+  background-image: linear-gradient(to left, violet, blue, green, #c7c70e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #0000;
+  background-clip: text;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  place-items: center;
+  gap: 50px;
+}
+
+.preview {
+  iframe {
+    margin-top: 30px;
+  }
+}
