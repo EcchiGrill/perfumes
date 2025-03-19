@@ -20,6 +20,24 @@ a {
   font-size: 18px;
 }
 
+a:link {
+  color: #333;
+}
+
+a:visited {
+  color: #666;
+}
+
+a:hover {
+  color: #0066cc;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+a:active {
+  color: #ff4400;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -35,9 +53,31 @@ header {
   background-clip: text;
 }
 
+.logo::before {
+  content: "★";
+  margin-right: 10px;
+}
+
+.logo::after {
+  content: "★";
+  margin-left: 10px;
+}
+
 .navbar {
   display: flex;
+  place-items: center;
   gap: 20px;
+}
+
+.navbar a:not(:last-child)::before {
+  content: "•";
+  margin-right: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navbar a:not(:last-child):hover::before {
+  opacity: 1;
 }
 
 main {
@@ -57,7 +97,8 @@ button {
 
 .preview,
 .collection,
-.location {
+.location,
+.cart {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -70,25 +111,30 @@ button {
   grid-template-columns: repeat(4, 500px);
   place-items: center;
   gap: 30px;
+}
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    border: 1px solid gray;
-    padding: 15px;
-    border-radius: 10px;
+.card {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  border: 1px solid gray;
+  padding: 15px;
+  border-radius: 10px;
 
-    sup {
-      color: red;
-      margin-left: 5px;
-    }
+  sup {
+    color: red;
+    margin-left: 5px;
   }
 
   img {
     width: 350px;
     height: auto;
   }
+}
+
+.card:first-child {
+  border: 2px solid #0066cc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-us {
@@ -116,6 +162,22 @@ button {
       height: 100px;
       padding-left: 5px;
     }
+  }
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+
+  th,
+  td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid gray;
+  }
+
+  th {
+    background-color: #f2f2f2;
   }
 }
 
