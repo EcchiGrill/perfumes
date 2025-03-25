@@ -69,6 +69,10 @@ header {
   gap: 20px;
 }
 
+.navbar > a:first-child + a {
+  color: red;
+}
+
 .navbar a:not(:last-child)::before {
   content: "•";
   margin-right: 5px;
@@ -125,11 +129,15 @@ button {
     color: red;
     margin-left: 5px;
   }
+}
 
-  img {
-    width: 350px;
-    height: auto;
-  }
+.card > img {
+  width: 350px;
+  height: auto;
+}
+
+.card > img:hover {
+  scale: 1.05;
 }
 
 .card:first-child {
