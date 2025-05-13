@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles.css" />
     <title>Contact us</title>
+    <script defer src="../scripts/contact-us.js"></script>
   </head>
   <body>
     <header>
@@ -24,11 +25,16 @@
     </header>
     <main class="contact-us">
       <h2>Contact us</h2>
-      <form method="post">
-        <input type="text" placeholder="Name" />
-        <input type="text" placeholder="Last Name" />
+
+      <form method="post" id="contact-form">
+        <input type="text" placeholder="Name" id="contact-form__name" />
+        <input
+          type="text"
+          placeholder="Last Name"
+          id="contact-form__last-name"
+        />
         <textarea placeholder="Your order here.."></textarea>
-        <input type="submit" value="Send" />
+        <button type="submit">Submit</button>
       </form>
     </main>
   </body>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles.css" />
+    <script defer src="../scripts/cart.js"></script>
     <title>Shopping Cart</title>
     <style>
       table th {
@@ -29,42 +30,55 @@
     </header>
     <main class="cart">
       <h1>Shopping Cart</h1>
-      <table>
-        <tr>
-          <th>Product</th>
-          <th>Name</th>
-          <th>Link</th>
-          <th>Quantity</th>
-        </tr>
-        <tr>
-          <td><img src="../img/tom_ford_tabacco_vanille.jpg" height="50" /></td>
-          <td><h4>Tom Ford Tobacco Vanille</h4></td>
-          <td>
-            <a
-              href="https://www.brocard.ua/ru/product/parfyumirovannaya-voda-tom-ford-tabacco-vanille-30-ml-001787"
-              >click*</a
-            >
-          </td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td><img src="../img/versace_eros.jpg" height="50" /></td>
-          <td><h4>Versace Eros</h4></td>
-          <td>
-            <a href="https://makeup.com.ua/ua/product/52915">click*</a>
-          </td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td><img src="../img/jean_paul_gaultier.jpg" height="50" /></td>
-          <td><h4>Jean Paul Gaultier Le Beau</h4></td>
-          <td><a href="https://makeup.com.ua/ua/product/1068441">click*</a></td>
-          <td>1</td>
-        </tr>
-      </table>
+
+      <div class="cart-wrapper">
+        <table>
+          <tr>
+            <th>Product</th>
+            <th>Name</th>
+            <th>Link</th>
+            <th>Quantity</th>
+          </tr>
+          <tr>
+            <td>
+              <img src="../img/tom_ford_tabacco_vanille.jpg" height="50" />
+            </td>
+            <td><h4>Tom Ford Tobacco Vanille</h4></td>
+            <td>
+              <a
+                href="https://www.brocard.ua/ru/product/parfyumirovannaya-voda-tom-ford-tabacco-vanille-30-ml-001787"
+                >click*</a
+              >
+            </td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td><img src="../img/versace_eros.jpg" height="50" /></td>
+            <td><h4>Versace Eros</h4></td>
+            <td>
+              <a href="https://makeup.com.ua/ua/product/52915">click*</a>
+            </td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td><img src="../img/jean_paul_gaultier.jpg" height="50" /></td>
+            <td><h4>Jean Paul Gaultier Le Beau</h4></td>
+            <td>
+              <a href="https://makeup.com.ua/ua/product/1068441">click*</a>
+            </td>
+            <td>1</td>
+          </tr>
+        </table>
+
+        <div id="cartMenu" class="cart-menu">
+          <button data-action="updateQuantity">Update Quantity</button>
+          <button data-action="clearCart">Clear Cart</button>
+          <button data-action="checkout">Proceed to Checkout</button>
+        </div>
+      </div>
 
       <h2>Shipping Information</h2>
-      <ul>
+      <ul id="shipping-info">
         <li>Free shipping on orders over $100</li>
         <li>Express delivery available</li>
         <li>International shipping to select countries</li>

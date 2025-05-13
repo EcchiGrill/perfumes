@@ -95,6 +95,14 @@ main {
   place-items: center;
 }
 
+#preview p {
+  color: #c7c70e;
+}
+
+#preview > p {
+  color: red;
+}
+
 button {
   padding: 4px;
   background: transparent;
@@ -327,4 +335,39 @@ dd {
 #perfume-nav a:hover {
   background-color: #0066cc;
   color: white;
+}
+
+.cart-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+}
+
+.cart-menu {
+  max-width: 33%;
+  padding: 15px;
+  background: #f8f8f8;
+  border-radius: 5px;
+  display: flex;
+}
+
+.cart-menu button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #218838;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#shipping-info > li {
+  cursor: pointer;
+}
+
+.highlighted {
+  background-color: #f0f7ff;
+  border: 2px solid #0066cc;
+  padding: 2px;
 }

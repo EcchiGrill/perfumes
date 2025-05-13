@@ -30,7 +30,7 @@ function changeBackgroundColor(color) {
   document.body.style.backgroundColor = color;
   setTimeout(() => {
     document.body.style.backgroundColor = "";
-  }, 30000);
+  }, 3000);
 }
 
 function redirectTo(url) {
@@ -68,13 +68,14 @@ function manipulateDOM() {
   replaceElement.textContent = "Приклад replaceElement.";
   textElement.replaceWith(replaceElement);
 
-  replaceElement.remove();
+  // replaceElement.remove();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // redirectTo("https://www.google.com/");
   userDialog();
   developerInfo("Dmytro", "Oborskyi");
   compareStrings("Hello", "World");
-  changeBackgroundColor("gray");
+  changeBackgroundColor("yellow");
   manipulateDOM();
 });
